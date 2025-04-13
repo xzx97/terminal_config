@@ -1,0 +1,29 @@
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
+
+# Starship
+eval "$(starship init zsh)"
+
+# zsh-syntax-hightlighting
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 
+
+alias ls="lsd --icon=always"
+alias ll="lsd -l --icon=always"
+
+# set http_proxy and https_proxy with v2raya
+alias proxy='export all_proxy=socks5://127.0.0.1:7890'
+alias unproxy='unset all_proxy'
+
+#Yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+		rm -f -- "$tmp"
+}
