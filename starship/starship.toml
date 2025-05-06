@@ -11,3 +11,7 @@ success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
+
+[python]
+symbol = '👾 '
+detect_files = ['__init__.py', 'pyproject.toml', 'setup.py']
