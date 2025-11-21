@@ -9,7 +9,7 @@ config = {
 	window_decorations = "RESIZE",
 	default_cursor_style = "BlinkingBar",
 	color_scheme = "Nord (Gogh)",
-	font = wezterm.font("Terminess Nerd FontMono", { weight = "Bold" }),
+	font = wezterm.font("Hack Nerd Font"),
 	font_size = 18,
 }
 
