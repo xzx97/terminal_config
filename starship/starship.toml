@@ -13,5 +13,5 @@ success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set
 disabled = true
 
 [python]
-symbol = '👾 '
+symbol = '   '
 detect_files = ['__init__.py', 'pyproject.toml', 'setup.py']

@@ -10,7 +10,7 @@ config = {
 	default_cursor_style = "BlinkingBar",
 	color_scheme = "Nord (Gogh)",
 	font = wezterm.font("Hack Nerd Font"),
-	font_size = 18,
+	font_size = 16,
 }
 
 return config
